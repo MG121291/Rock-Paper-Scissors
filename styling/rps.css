@@ -15,6 +15,10 @@ width: 50px;
 
 }
 
+.button-container {
+  width:100%;
+}
+
 .move-button {
   height: 120px;
   width: 120px;
@@ -45,4 +49,25 @@ width: 50px;
   font-size: 15px;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 370px) {
+  .move-button {
+    height: 80px;
+    width: 80px;
+}
+}
+
+@media (min-width: 371px) and (max-width: 420px) {
+  .move-button {
+    height: 100px;
+    width: 100px;
+}
+}
+
+@media (min-width: 421px){
+  .move-button {
+    height: 120px;
+    width: 120px;
+}
 }
