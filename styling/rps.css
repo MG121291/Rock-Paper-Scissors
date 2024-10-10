@@ -12,7 +12,6 @@ body {
 .move-icon {
 height: 50px;
 width: 50px;
-
 }
 
 .button-container {
@@ -55,19 +54,31 @@ width: 50px;
   .move-button {
     height: 80px;
     width: 80px;
-}
+  }
+  .move-icon {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 @media (min-width: 371px) and (max-width: 420px) {
   .move-button {
     height: 100px;
     width: 100px;
-}
+  }
+  .move-icon {
+    height: 40px;
+    width: 40px;
+    }
 }
 
 @media (min-width: 421px){
   .move-button {
     height: 120px;
     width: 120px;
-}
+  }
+  .move-icon {
+    height: 50px;
+    width: 50px;
+  }
 }
