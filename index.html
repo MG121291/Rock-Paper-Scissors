@@ -24,7 +24,8 @@
   </button>
 
     <p class = "js-result result"></p>
-    <p class = "js-moves"></p>
+    <i class = "js-player-moves"></i>
+    <i class = "js-computer-moves"></i>
     <p class = "js-score score"></p>
 
     <button class = "reset-button"
@@ -66,7 +67,7 @@
     return computerMove;
   }
 
-
+  
   function playGame(playerMove) {
 
     // We assign the results of computerMove function as a variable //
@@ -103,13 +104,46 @@
     document.querySelector('.js-result')
       .innerHTML = `${result}`;
 
+      // below runs the display of the playermove image on the screen//
+      if (playerMove === 'rock') {
+        document.querySelector('.js-player-moves')
+          .innerHTML = `You
+            <img src = "images/rock-emoji.png" class = "move-icon">`
+    } else if (playerMove === 'paper') {
+        document.querySelector('.js-player-moves')
+          .innerHTML = `You
+            <img src = "images/paper-emoji.png" class = "move-icon">`
+    } else if (playerMove === 'scissors') {
+        document.querySelector('.js-player-moves')
+          .innerHTML = `You
+            <img src = "images/scissors-emoji.png" class = "move-icon">`
+    }
+
+    // below runs the display of the computermove image on the screen//
+        if (computerMove === 'rock') {
+          document.querySelector('.js-computer-moves')
+            .innerHTML = `<img src = "images/rock-emoji.png" class = "move-icon"> 
+              Computer`
+      } else if (computerMove === 'paper') {
+          document.querySelector('.js-computer-moves')
+            .innerHTML = `<img src = "images/paper-emoji.png" class = "move-icon"> 
+             Computer`
+      } else if (computerMove === 'scissors') {
+          document.querySelector('.js-computer-moves')
+            .innerHTML = `<img src = "images/scissors-emoji.png" class = "move-icon"> 
+              Computer`
+      }
+
       // the below displays the moves selected on the screen, but in images. Because playerMove and computerMove are saved as strings, the variable can be used as a substitute for part of the name of the file. E.g. if playerMove is 'Rock' then the displayed image will be rock-emoji.png. //
+
+    /* The below code works locally but not on GIT
     document.querySelector('.js-moves')
       .innerHTML = `You
-      <img src = "images/${playerMove}-emoji.png" class = "move-icon">
-      <img src = "images/${computerMove}-emoji.png" class = "move-icon">
-      Computer`;
-  }     
+      <img src = "images/rock-emoji.png" class = "move-icon">
+      <img src = "images/-emoji.png" class = "move-icon">
+      Computer`;*/
+  }    
+
 </script>
 </body>
   </html>
